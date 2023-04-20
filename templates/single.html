@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href= "{{url_for('static', filename= 'style.css')}}">
+
+  </head>
+  <body>
+{% include 'menu.html'%}
+    
+    <h1> {{page.title}} </h1>
+    <img  class="jumbo" src="static/img/{{page.img}}">
+
+    {{page}} 
+
+
+
+ </img>
+
+ {%if imgs : %}
+ <div id= "gal"> 
+    {%for img in imgs : %}
+      <div class = "simg">
+     <img src="pages/{{ page.path  }}/{{ img }}" />
+   </div>
+
+    {% endfor %}
+
+ </div>
+ {% else %}
+ {% endif %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="{{url_for('static', filename= 'main.js')}}"></script>
+  </body>
+</html>
