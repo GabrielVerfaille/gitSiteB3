@@ -4,13 +4,13 @@ from flask import render_template, send_from_directory
 import os 
 
 app = Flask(__name__)
-
+app.config['APPLICATION_ROOT'] = '/flaskapp'
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_MARKDOWN_EXTENSIONS = ['extra']
 FLATPAGES_AUTO_RELOAD = True 
 
 app.config.from_object(__name__)
-
+application = app
 pages = FlatPages(app)
 
 
