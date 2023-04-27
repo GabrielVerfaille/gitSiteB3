@@ -4,7 +4,7 @@ from flask import render_template, send_from_directory
 import os 
 
 app = Flask(__name__)
-app.config['APPLICATION_ROOT'] = '/flaskapp'
+app.config['APPLICATION_ROOT'] = '/Flask'
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_MARKDOWN_EXTENSIONS = ['extra']
 FLATPAGES_AUTO_RELOAD = True 
