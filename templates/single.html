@@ -26,7 +26,7 @@
  <div id= "gal"> 
     {%for img in imgs : %}
       <div class = "simg">
-     <img src="{{ url_for('index', _external=False) }} pages/{{ page.path  }}/{{ img }}" />
+     <img src="{{ url_for('index', _external=False) }}pages/{{ page.path  }}/{{ img }}" />
    </div>
 
     {% endfor %}
